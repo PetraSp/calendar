@@ -1,0 +1,43 @@
+{
+  "name": "typescript-mocha-kata-seed",
+  "version": "1.0.0",
+  "description": "Typescript Mocha seed for TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -w -r ts-node/register test/**/*.spec.ts --watch-extensions ts"
+  },
+  "author": "albert",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "@types/chai": "~4.1.2",
+    "@types/mocha": "~2.2.41",
+    "@types/node": "~7.0.18",
+    "chai": "~4.1.2",
+    "mocha": "^5.2.0",
+    "mocha-param": "^2.0.0",
+    "nyc": "^13.1.0",
+    "rimraf": "~2.5.2",
+    "ts-node": "~3.1.0",
+    "typescript": "~2.7.2"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "test/**"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ]
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
